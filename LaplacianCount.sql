@@ -1,13 +1,8 @@
 CREATE PROCEDURE laplacianCount
-	-- name of the table, which is affected by 
-	-- the query
-	@table VARCHAR(MAX),
-	-- class attribute
-	@attribute VARCHAR(MAX), 
-	-- epsilon
-	@e FLOAT,			
-	--condition along the path in the tree			
-	@condition VARCHAR(MAX)	
+@table VARCHAR(MAX),	-- name of the table, which is affected by the query
+@attribute VARCHAR(MAX),-- class attribute
+@e FLOAT,				-- epsilon				
+@condition VARCHAR(MAX)	--condition along the path in the tree	
 AS
 BEGIN
 	-- generate a random number by the uniform
@@ -27,9 +22,9 @@ BEGIN
 	-- equals to 0.5, new random numbers 
 	-- are generated
 	WHILE (ABS(CAST(@random AS FLOAT)) = 0.5)
-		BEGIN
-			SET @random = ROUND(rand() - 0.5 , 10)
-		END
+	BEGIN
+		SET @random = ROUND(rand() - 0.5 , 10)
+	END
 
 	-- Execute the query and add Laplacian
 	-- noise to the outcome. The noisy 
@@ -46,7 +41,7 @@ BEGIN
 		ROUND
 			(COUNT(*) - (' + @b + '* sign(' + @random + ')) * LOG(1-2*ABS(' + @random + '))
 		,0)
-		 AS int) As quantity 
+	AS int) As quantity 
 	FROM ' + @table + ' 
 	WHERE ' + @condition
 
