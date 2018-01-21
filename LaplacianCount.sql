@@ -13,11 +13,11 @@ BEGIN
   -- distribution between 0 and 1
   -- and shift it by - 0.5 to get values in 
   -- the range of -0.5 and 0.5
-  DECLARE @random VARCHAR(12)
-  SET @random = ROUND(rand() - 0.5 , 10)
+  DECLARE @random VARCHAR(20)
+  SET @random = ROUND(rand() - 0.5 , 18)
 
   -- b is the inverse of the epsilon parameter
-  DECLARE @b VARCHAR(20)
+  DECLARE @b VARCHAR(MAX)
   SET @b = ROUND( 1 / @e , 20)
 
   -- if @random is equal to 0.5, the
