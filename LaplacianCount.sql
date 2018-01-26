@@ -34,11 +34,10 @@ BEGIN
   -- noise to the outcome. The noisy 
   -- result is rounded and casted to an
   -- integer to get a natural number 
-  --	for the count query
+  -- for the count query.
+  -- 'quantitiy' denotes the query outcome.
 
-  -- The formula is: quantity - (1 / epsilon 
-  -- * sign (@random *
-  -- log ( 1 - 2 * Abs(@random))))
+  -- The formula is: quantity - (1 / epsilon * sign (@random * log ( 1 - 2 * Abs(@random))))
   DECLARE @query VARCHAR(MAX)
   SET @query = 'SELECT 
   CAST(
