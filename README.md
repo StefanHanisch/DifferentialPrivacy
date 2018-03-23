@@ -1,4 +1,5 @@
 When public available data sets contain sensitive information about individuals, security measures are essentially.
+
 [This paper](https://github.com/StefanHanisch/DifferentialPrivacy/blob/master/DifferentialPrivacyForDecisionTrees.pdf) provides an overview of traditional techniques with their corresponding weaknesses and introduces differential privacy as a mathematical substantiated framework to guarantee privacy. 
 After a mathematical derivation, real world examples illustrate the technique and point out possible disadvantages.
 
