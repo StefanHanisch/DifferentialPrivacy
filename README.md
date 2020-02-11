@@ -28,5 +28,5 @@ I learned that conventional data privacy techniques are not feasible to guarante
 For the evaluation of the tree-based estimators, I experienced the strong run-time requirements. Even a parallelization of all paths through the trees took a long time, up to several hours for deep instances. This let me to do my experiments on AWS instances and get some experience with Amazons web services.
 For the final evaluation, only the use of bimodal visualization get me the insights that I needed and shown in the paper. For this case, I made my first experiences with Tableau.
 
-Overall, this project was very informative, not only about the implementation of decision trees and DP, but also about cloud computation, palatalization and data evaluation.
+Overall, this project was very informative, not only about the implementation of decision trees and DP, but also about cloud computation, parallelization and data evaluation.
 </div>
